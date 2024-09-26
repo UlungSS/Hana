@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FastEndpoints" Version="5.29.0.4-beta" />
+    <PackageReference Include="FastEndpoints.Security" Version="5.29.0.4-beta" />
+    <PackageReference Include="FastEndpoints.Swagger" Version="5.29.0.4-beta" />
+    <PackageReference Include="JetBrains.Annotations" Version="2024.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Hana.Common\Hana.Common.csproj" />
+    <ProjectReference Include="..\Hana.Core\Hana.Core.csproj" />
+  </ItemGroup>
+
+</Project>
