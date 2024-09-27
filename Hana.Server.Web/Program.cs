@@ -1,5 +1,6 @@
 using Hana.Core.Api.Middleware;
 using Hana.Extensions;
+using Hana.Users.Extensions;
 using Microsoft.AspNetCore.ResponseCompression;
 using System.Text.Json.Serialization;
 
@@ -86,6 +87,9 @@ services.AddHana(hana =>
 
     //setting persistence provider
     hana.UseHanaCore(core => core.PersistenceOptions = options => hanaPersistence.Bind(options));
+    
+    //module
+    hana.UseModuleUser();
     hana.AddSwagger();
 });
 #endregion

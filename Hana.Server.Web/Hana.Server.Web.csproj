@@ -17,6 +17,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Hana.Core.Api\Hana.Core.Api.csproj" />
     <ProjectReference Include="..\Hana.Identity\Hana.Identity.csproj" />
+    <ProjectReference Include="..\Hana.Users\Hana.Users.csproj" />
     <ProjectReference Include="..\Hana\Hana.csproj" />
   </ItemGroup>
 
