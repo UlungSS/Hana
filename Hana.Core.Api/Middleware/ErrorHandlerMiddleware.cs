@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Hana.Api.Common.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using System.Net;
 using System.Text.Json;
@@ -38,7 +39,9 @@ public class ErrorHandlerMiddleware(RequestDelegate next, ILogger<ErrorHandlerMi
                     break;
             }
 
-            var result = JsonSerializer.Serialize(new { message = error?.Message });
+            var errorResult = new DefaultResponse((int)RcCollection.Failed, error.Message, response.StatusCode, null!);
+
+            var result = JsonSerializer.Serialize(errorResult);
             await response.WriteAsync(result);
         }
     }

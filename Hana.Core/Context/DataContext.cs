@@ -52,6 +52,7 @@ public class DataContext(IOptions<PersistenceSetting> options)
                     name VARCHAR,
                     phone_number VARCHAR,
                     email VARCHAR,
+                    address VARCHAR,
                     role INTEGER,
                     pass_hash VARCHAR
                 );
